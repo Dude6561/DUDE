@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="calculator.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="calculator">
+    <input id="displaycalc" readonly><br>
+    <div id="box">
+      <button onclick="display('+')"   class="btn1">+</button>
+      <button onclick="display('7')"   class="btn2">7</button>
+      <button onclick="display('8')"   class="btn2">8</button>
+      <button onclick="display('9')"   class="btn3">9</button>
+      <button onclick="display('-')"   class="btn4">-</button>
+      <button onclick="display('4')"   class="btn5">4</button>
+      <button onclick="display('5')"   class="btn6">5</button>
+      <button onclick="display('6')"   class="btn7">6</button>
+      <button onclick="display('*')"   class="btn8">X</button>
+      <button onclick="display('1')"   class="btn9">1</button>
+      <button onclick="display('2')"   class="btn10">2</button>
+      <button onclick="display('3')"   class="btn11">3</button>
+      <button onclick="display('/')"   class="btn12">/</button>
+      <button onclick="display('0')"   class="btn13">0</button>
+      <button onclick="display('.')"   class="btn14">.</button>
+      <button onclick="calculatevalue()">   =              </button>
+      <button onclick="cleardisplay()"   class="btn16">       C              </button>
+    </div>  
+</div>
+<script src="calculator.js"></script>
+    
+</body>
+</html>
