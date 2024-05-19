@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <title>game</title>
+</head>
+<script>
+    function random(){
+        var randomnumber;
+        randomnumber=Math.floor(Math.random()*3)+1;
+        return randomnumber;
+
+    }
+    console.log(random());
+    //random pick by computer
+    
+    function computerpick(){
+        var randomnumber = random();
+        let computerpicks ='';
+
+    if(randomnumber === 1){
+     computerpicks = 'rock';
+     return computerpicks;
+    }
+    else if(randomnumber === 2){
+       computerpicks = 'paper';
+        return computerpicks;
+    }
+    else if(randomnumber === 3){
+       computerpicks = 'scissor';
+        return computerpicks;
+    }
+}
+console.log(computerpick());
+
+//result function
+function resultrock(){
+
+    var computerpicks = computerpick();
+    var resultt = '';
+    if(computerpicks === 'rock'){
+        resultt = 'Tie';    
+    }
+    else if(computerpicks === 'paper'){
+        resultt = 'loose';
+    }
+    if(computerpicks === 'scissor'){
+        resultt = 'win';
+    }
+    alert(`you picked rock . computer picked ${computerpicks}. And we ${resultt}` );
+    return resultt;
+}
+
+function resultpaper(){
+    var computerpicks = computerpick();
+    var resultt;
+    if(computerpicks === 'rock'){
+        resultt = 'win';
+    }
+    else if(computerpicks === 'paper'){
+        resultt = 'draw';
+    }
+    if(computerpicks === 'scissor'){
+        resultt = 'loose';
+    }
+    alert(`you picked paper. computer picked ${computerpicks}. And we ${resultt}` );
+    return resultt;
+}
+function resultscissor(){
+    var computerpicks = computerpick();
+    var resultt;
+    if(computerpicks === 'rock'){
+        resultt = 'loose';
+    }
+    else if(computerpicks === 'paper'){
+        resultt = 'win';
+    }
+    if(computerpicks === 'scissor'){
+        resultt = 'draw';
+    }
+    alert(`you picked paper. computer picked ${computerpicks}. And we ${resultt}` );
+    return resultt;
+}
+
+
+
+</script>
+
+
+<body>
+    <p>Rock Paper scissor</p>
+    <button onclick="resultrock();">Rock</button>
+    <button onclick="resultpaper();">Paper</button>
+    <button onclick="resultscissor();">scissor</button>
+
+    
+    
+</body>
+</html>
